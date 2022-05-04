@@ -3,7 +3,7 @@ import { Connection } from '@solana/web3.js'
 import { useEffect, useState } from 'react'
 import { toFraction } from '../utils/numbers'
 
-export const RaySolPool: LiquidityPoolJsonInfo = {
+export const RaySolPool = {
     id: 'AVs9TA4nWDzfPJE9gGVNJMVhcQy3V9PGazuz33BfG2RA',
     baseMint: '4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R',
     quoteMint: 'So11111111111111111111111111111111111111112',
@@ -29,7 +29,7 @@ export const RaySolPool: LiquidityPoolJsonInfo = {
     marketBids: 'C1nEbACFaHMUiKAUsXVYPWZsuxunJeBkqXHPFr8QgSj9',
     marketAsks: '4DNBdnTw6wmrK4NmdSTTxs1kEz47yjqLGuoqsMeHvkMF',
     marketEventQueue: '4HGvdannxvmAhszVVig9auH6HsqVH17qoavDiNcnm9nj',
-}
+} as LiquidityPoolJsonInfo
 
 export const usePool = (connection: Connection, poolInfo: LiquidityPoolJsonInfo) => {
     const [liquidity, setLiquidity] = useState<LiquidityPoolInfo>()
